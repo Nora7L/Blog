@@ -1,0 +1,8 @@
+body,html,ul,li,ol,a,h1,h2,h3,h4,h5,h6,p{margin: 0;padding: 0;}
+body{width: 100%;height: 100%;font: 16px 'PT Serif', 'STZhongsong', '华文中宋', 'Microsoft Yahei', serif;}
+html{width: 100%;height: auto;}
+li{list-style: none;cursor: pointer;}
+a{text-decoration: none;}
+span{cursor: pointer;}
+.block{display: block;}
+.none{display: none;}
