@@ -130,7 +130,7 @@
 	font-size: 20px;
 	color: #19B1E0;
 }
-.section-meta a{
+.section-meta a span{
 	text-align: center;
 	color: #aaa;
 	font-size: 15px;
@@ -198,7 +198,8 @@ footer{
 }
 /*分页*/
 .page{
-	margin: 50px auto;
+	width: 1000px;
+	margin: -100px auto;
 	overflow: hidden;
 	text-align: center;
 }
