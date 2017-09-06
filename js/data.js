@@ -58,7 +58,7 @@ data={
        "data":'<h1 style="text-align:center">排序算法</h1><br><h2>1、冒泡排序</h2><br><img src="../img/冒泡排序.png">'
        +'<br><h2>2、快速排序</h2><br><img src="../img/2快速排序.png">'
        +'<br><h2>3、二路归并</h2><br><img src="../img/3二路并归.png">'
-       +'<br><br><h1 style="text-align:center">排序算法</h1>'
+       +'<br><br><h1 style="text-align:center">字符串操作</h1>'
        +'<br><h2>1、判断回文字符串</h2><br><img src="../img/3二路并归.png">'
        +'<br><h2>2、翻转字符串</h2><br><h3>思路一：反向遍历字符串</h3><br><img src="../img/思路一：反向遍历字符串.png">'
        +'<br><h3>思路二：转化成array操作</h3><br><img src="../img/转化成array操作.png">'
