@@ -21,7 +21,8 @@ $(function(){
 		if (scrollTop>headerH+60) {
 			$('.header').css({
 				'position':'fixed',
-				'top':"0"
+				'top':"0",
+				'zIndex':'9999'
 		    });
 		    $('.section').css('marginTop','120px')
 		}else{
@@ -30,3 +31,42 @@ $(function(){
 		}
    })
 });
+/*blog页面title动画*/
+$(function(){
+
+	for (var i = 1; i < 8; i++) {
+		    var num=0
+			$('#BlogALL-title a').fadeIn('slow')
+				.animate({
+					'top':(num+1)+"00px",
+					"left":i+"00px"
+				},1200)
+				.animate({
+					'top':num+"00px",
+					"left":(i+1)+"00px"
+				},1200)
+				.animate({
+					'top':(num+1)+"00px",
+					"left":(i+2)+"00px"
+				},1200).fadeOut()
+		
+	}
+	for (var i = 1; i < 9; i++) {
+		    var num=0
+			$('#BlogALL-title a').fadeIn('slow')
+				.animate({
+					'top':(num+1)+"00px",
+					"left":(10-i)+"00px"
+				},1200)
+				.animate({
+					'top':num+"00px",
+					"left":(10-(i+1))+"00px"
+				},1200)
+				.animate({
+					'top':(num+1)+"00px",
+					"left":(10-(i+2))+"00px"
+				},1200).fadeOut()
+		
+	}
+
+})

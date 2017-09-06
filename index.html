@@ -19,44 +19,53 @@
 
 </head>
 <body>
+    <!-- 回到顶部 -->
     <div class="top"><i class="iconfont icon-top"></i></div>
+    <!-- index -->
 	<div class="NaroBlog">
-		<header class="header">
-			<div class="header-nav">
-				<div class="header-nav-log">
-					<img src="img/IMG_8125.png">
-				</div>
-				<ul class="header-nav-nav">
-					<li><a href="">首页</a></li>
-					<li><a href="">BLOG</a></li>
-					<li><a href="">随笔</a></li>
-					<li><a href="">联系</a></li>
-					<li><a href="">收藏</a></li>
-					<li><a href="http://naro7l.lofter.com/" target="_blank">LIFE</a></li>
-				</ul>					
+	<header class="header">
+		<div class="header-nav">
+			<div class="header-nav-log">
+				<img src="img/IMG_8125.png">
 			</div>
-			<div class="header-nav-music">
-				<span class="raiseUp header--shadow">music</span>
-				<img src="img/IMG_8128.png">
-			</div>
-		</header>
+			<ul class="header-nav-nav">
+				<li><a href="file:///C:/Users/msi/Desktop/pinkblog/Blog/index.html">首页</a></li>
+				<li><a href="">BLOG</a></li>
+				<li><a href="">随笔</a></li>
+				<li><a href="">联系</a></li>
+				<li><a href="">收藏</a></li>
+				<li><a href="http://naro7l.lofter.com/" target="_blank">LIFE</a></li>
+			</ul>					
+		</div>
+		<div class="header-nav-music">
+			<span class="raiseUp header-shadow">music</span>
+			<img src="img/IMG_8128.png">
+		</div>
+	</header>
 		<div class="section">
 			<div class="section-bg"></div>
 			<!-- JSON 内容-->
 			<div class="section-content" id="section-content">
 			</div>
-			<div id="pagination1" class="page fl"></div>
 			<!-- 要实现的部分：1.点击回到顶部* 2.分页 3.统计点击量 4.排版的优化 5.加入云音乐ajax -->
 		</div>
-
-		<footer class="footer">
-			<div class="footer-nav-top"></div>
-			<div class="footer-nav-bom">
-				<h3>&copy;2017.8 Designed by Naro Liu</h3>
-				<p></p>
-			</div>
-		</footer>
+    <div id="footer">
+	    <iframe src="html/footer.html" frameborder="0" width="100%" height="80px"></iframe>
+	</div>
+		
 	</div>
 <script src="js/data.js"></script>
+<script type="text/javascript">
+	for(var i=0;i<data.sites.length;i++){
+	x+='<div class="section-content-content" id="section-content-content"><header class="section-header"><a href="file:///C:/Users/msi/Desktop/pinkblog/Blog/html/blog.html"><h1>' + data.sites[i].title + '</h1></a></header>'
+	+'<div class="section-meta"><a href=""><span>'+data.sites[i].data +data.sites[i].class+'</span></a></div>'
+	+'<div class="section-con"><a href="file:///C:/Users/msi/Desktop/pinkblog/Blog/html/blog.html"><img src='+data.sites[i].img+'></a></div>'
+	+'<footer class="section-footer"><a href="file:///C:/Users/msi/Desktop/pinkblog/Blog/html/blog.html"><p>'+data.sites[i].more+'</p></a><a href=""><span>'+data.sites[i].aclass+'</span></a></footer></div>';
+    
+}
+
+document.getElementById("section-content").innerHTML=x;
+
+</script>
 </body>
 </html>
