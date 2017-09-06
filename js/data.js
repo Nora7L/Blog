@@ -29,7 +29,7 @@ data={
 		"title":"GIT命令行",
 		"data":"2017.8.30",
 		"class":"随笔",
-		"img":"img/bg2.jpg",
+		"img":"img/bggit.jpg",
 		"more":"read more",
 		"aclass":"随笔"
 	},
@@ -37,7 +37,7 @@ data={
 		"title":"关于JSON和AJAX的想法",
 		"data":"2017.9.1",
 		"class":"随笔",
-		"img":"img/bg2.jpg",
+		"img":"img/AJAX.png",
 		"more":"read more",
 		"aclass":"随笔"
 	}
@@ -52,9 +52,10 @@ data={
 	]
 }
 for(var i=0;i<data.sites.length;i++){
-	x+='<div class="section-content-content"><header class="section-header"><a href=""><h1>' + data.sites[i].title + '</h1></a></header>'
+	x+='<div class="section-content-content" id="section-content-content"><header class="section-header"><a href=""><h1>' + data.sites[i].title + '</h1></a></header>'
 	+'<div class="section-meta"><a href=""><span>'+data.sites[i].data +data.sites[i].class+'</span></a></div>'
 	+'<div class="section-con"><a href=""><img src='+data.sites[i].img+'></a></div>'
 	+'<footer class="section-footer"><a href=""><p>'+data.sites[i].more+'</p></a><a href=""><span>'+data.sites[i].aclass+'</span></a></footer></div>';
 }
 document.getElementById("section-content").innerHTML=x;
+

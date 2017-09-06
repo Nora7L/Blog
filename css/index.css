@@ -203,12 +203,6 @@ footer{
 	overflow: hidden;
 	text-align: center;
 }
-.page :nth-child(1){
-	float: left;
-}
-.page :last-child{
-	float: right;
-}
 @media (min-width: 768px) and (max-width: 991px){
   
 }
@@ -228,3 +222,7 @@ footer{
 	left: 24px;
 	top: 15px;
 }
+/*分页*/
+/* #page>a{display:inline-block;margin: 5px; width: 50px;height: 50px;line-height: 50px;background-color: rgba(42,218,239,.5);border-radius: 50px;text-align: center;color: #666;text-decoration: none;font-family: '微软雅黑'; }
+#page>a:hover{background: #666;color: white;}
+ */
