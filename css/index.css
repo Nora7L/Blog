@@ -262,6 +262,10 @@ footer{
 	color: #666;
 
 }
+/*代码高亮*/
+.heightDm{
+	margin: 20px 50px;
+}
 /*分页*/
 .page{
 	width: 1000px;

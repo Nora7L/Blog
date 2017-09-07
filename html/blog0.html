@@ -12,14 +12,8 @@
 		<!-- js -->
 	<script src="../js/jquery-3.2.1.min.js"></script>
 	<script src="../js/index.js"></script>
-	<!-- Dm -->
-	<link rel="stylesheet" type="text/css" href="../syntaxhighlighter/styles/shCore.css">
-	<link rel="stylesheet" type="text/css" href="../syntaxhighlighter/styles/shThemeMidnight.css">
-	<script src="../syntaxhighlighter/scripts/shCore.js"></script>
-	<script src="../syntaxhighlighter/scripts/shBrushJScript.js"></script>
 </head>
 <body>
-
 	<!-- 回到顶部 -->
     <div class="top"><i class="iconfont icon-top"></i></div>
     <!-- index -->
@@ -43,21 +37,14 @@
 			<img src="../img/IMG_8128.png">
 		</div>
 	</header>
-	<div id="BlogALL">
-		<div class="section-bg"></div>
-		<div id="BlogALL-title">
+	<div id="BlogALL" style="height: 1200px">
+		<div class="section-bg" style="height: 1200px" ></div>
+		<div id="BlogALL-title" >
 			<a href=""><img src="../img/IMG_8133.JPG"></a>
-			<p id="BlogALL-title-small">
-				
-			</p>
+			<p id="BlogALL-title-small"></p>
 		</div>
-		<div id="BlogALL-content">
-			<!-- 代码显示 -->
-<!-- 			<div class="heightDm">
-				<pre class="brush: js">
-					
-				</pre>
-			</div> -->
+		<div id="BlogALL-content" style="height: 800px">
+			
 		</div>
 	</div>	
     <div id="footer">
@@ -67,16 +54,12 @@
 	</div>
 	<script src="../js/data.js"></script>
 	<script type="text/javascript">
-		// y+=data.sites[3].title;
-  //       document.getElementById("BlogALL-title-small").innerHTML=y;
-  //       var z="";
-  //       z+='<div class="BlogALL-content-con"><pre>'+data.content[1].data+'</pre></div>';
-  //       document.getElementById("BlogALL-content").innerHTML=z;
+		y+=data.sites[0].title;
+		document.getElementById("BlogALL-title-small").innerHTML=y;
+		var z="";
+		z+='<div class="BlogALL-content-con"><pre>'+data.content[0].data+'</pre></div>';
+		document.getElementById("BlogALL-content").innerHTML=z;
 
-	</script>
-	   <!-- 初始化高亮 -->
-	<script type="text/javascript">
-		SyntaxHighlighter.all();
 	</script>
 </body>
 </html>
