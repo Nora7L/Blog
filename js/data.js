@@ -91,7 +91,7 @@ data={
        .bgImg{
        	width: 500px;
        	height: 620px;
-       	background-image: url(650.png);
+       	background-image: url(http://ovuz0ozqd.bkt.clouddn.com/650.png);
        	background-color: rgba(86,219,218,0.4);
        	position: relative;
        	left: 0;
@@ -145,7 +145,8 @@ data={
        </head>
        <body>
        <div class="bgImg" id="bgImg">
-       <img  value="开始" src="center.png"  onclick="begin(this)">
+       <img  value="开始" src="http://ovuz0ozqd.bkt.clouddn.com/center.png"  
+       onclick="begin(this)">
        <span id="alls">得分：</span>
        <span id="score"> 0</span>
        <p class="over" id="over">游戏结束</p>
