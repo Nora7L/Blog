@@ -53,8 +53,21 @@ data={
 	"content":[
 	{
        "data":`<h5>    自己搭建的博客怎么看都是好的</h5><br>`
-               +`<h5>2017.8.24</h5><br><p>    搭建好了了自己的第一个页面，用时两周。长长的lis里终于搞定了一项，超级鸡冻啊！发布的时候，手都是抖的！这么久以来，自己慢慢学，一点点看，终于有了一点收获，这也是对自己的一点肯定
-现在的我非常有动力，继续努力下去了！<br>fighting！</p>`
+               +`<h5>2017.8.24</h5><br><p style=" text-align:center;margin-right:111px;">
+               搭建好了了自己的第一个页面
+               用时两周
+               长长的lis里终于搞定了一项
+               超级鸡冻啊！
+               发布的时候
+               手都是抖的
+               这么久以来
+               自己慢慢学
+               一点点看
+               终于有了一点收获
+               这也是对自己的一点肯定
+               现在的我非常有动力
+               继续努力下去了
+               fighting！</p>`
 	},
 	{
        "data":'<h1 style="text-align:center">排序算法</h1><br><h2>1、冒泡排序</h2><br><img src="http://ovuz0ozqd.bkt.clouddn.com/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.png">'
@@ -80,7 +93,7 @@ data={
 	},
 	{
        "data":`<p>    用了几天的时间把之前写的小游戏俄罗斯方块改了一下，下面贴代码：</p>`
-       +`<div class="heightDm" style="margin:-45px 0px;">
+       +`<div class="heightDm" >
        <pre class="brush: js">
        <!DOCTYPE html>
        <html lang="en">
@@ -145,7 +158,8 @@ data={
        </head>
        <body>
        <div class="bgImg" id="bgImg">
-       <img  value="开始" src="http://ovuz0ozqd.bkt.clouddn.com/center.png"  
+       <img  value="开始" 
+       src="http://ovuz0ozqd.bkt.clouddn.com/center.png"  
        onclick="begin(this)">
        <span id="alls">得分：</span>
        <span id="score"> 0</span>
