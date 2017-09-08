@@ -101,19 +101,15 @@
 /*section*/
 .section{
 	margin:0 auto;
-	width:100%;
-	height: 2400px;
+	width:100%
 }
-.section-bg{
-  position:absolute;
-  z-index: -1;
+body{
   width: 100%;
-  height: 2400px;
-  background-image: url(../img/IMG_8144.jpg) ;
+  height: 100%;
+  background-image: url(../img/IMG_8144.jpg);
 }
 .section-content{
 	width: 1000px;
-	height: 2400px;
 	margin:0 auto;
 
 }
@@ -200,16 +196,10 @@ footer{
 #BlogALL{
 	margin:0 auto;
 	width:100%;
-	height: 2400px;
 }
 #BlogALL-content{
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 350px;
-	margin: auto;
+	margin: 350px auto 200px;
 	width:1000px;
-	height: 1900px;
 	background-color: #F0FFFF;
 	box-shadow: 2px 2px 5px #aaa,-2px 0 5px #aaa;
 }
