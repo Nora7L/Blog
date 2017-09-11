@@ -24,7 +24,7 @@ $(function(){
 				'top':"0",
 				'zIndex':'9999'
 		    });
-		    $('.section').css('marginTop','60px')
+		    $('.section').css('marginTop','120px')
 		}else{
             $('.header').css('position','static');
 		    $('.section').css('marginTop','60px')
