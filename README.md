@@ -9,3 +9,5 @@
 # 9.5
 >
 搞定了JSON，收获很大，在查找思考的过程中学习了好多新知识！特别喜欢这种探索的感觉，慢慢的一点点解决问题，特别有成就感。
+
+dome： https://nora7l.github.io/Blog/index.html
