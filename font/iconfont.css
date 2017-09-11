@@ -17,7 +17,11 @@
 
 .icon-xiayiye:before { content: "\e635"; }
 
-.icon-top:before { content: "\e626"; }
+.icon-top:before { 
+  content: "\e626"; 
+
+  text-align: center;
+}
 
 .icon-shangyiye:before { content: "\e600"; }
 

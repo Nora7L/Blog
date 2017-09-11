@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>我的新博客</title>
-		<!-- font -->
-	<link rel="stylesheet" type="text/css" href="../font/iconfont.css">
-	<!-- title -->
+	<title>blog</title>
 	<link rel="icon" href="../img/title.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- font -->
+	<link rel="stylesheet" type="text/css" href="../font/iconfont.css">
+    
+	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="../css/my.css">
 	<link rel="stylesheet" type="text/css" href="../css/index.css">
-		<!-- js -->
+	<!-- js -->
 	<script src="../js/jquery-3.2.1.min.js"></script>
 	<script src="../js/index.js"></script>
 </head>
 <body>
-	<!-- 回到顶部 -->
+    <!-- 回到顶部 -->
     <div class="top"><i class="iconfont icon-top"></i></div>
     <!-- index -->
 	<div class="NaroBlog">
@@ -25,9 +27,9 @@
 			</div>
 			<ul class="header-nav-nav">
 				<li><a href="../index.html">首页</a></li>
-				<li><a href="BLOGALL.html">BLOG</a></li>
-				<li><a href="about.html">联系</a></li>
-				<li><a href="collect.html">收藏</a></li>
+				<li><a href="../html/BLOGALL.html">BLOG</a></li>
+				<li><a href="../html/about.html">联系</a></li>
+				<li><a href="../html/collect.html">收藏</a></li>
 				<li><a href="http://www.qdfuns.com/house/45862/note">笔记</a></li>
 				<li><a href="http://naro7l.lofter.com/" target="_blank">LIFE</a></li>
 			</ul>					
@@ -37,29 +39,30 @@
 			<img src="../img/IMG_8128.png">
 		</div>
 	</header>
-	<div id="BlogALL" >
-		<div class="section-bg" ></div>
-		<div id="BlogALL-title" >
-			<a href=""><img src="../img/IMG_8133.JPG"></a>
-			<p id="BlogALL-title-small"></p>
+	<div class="section">			
+			<!-- JSON 内容-->
+		
+		<div class="section-content" id="section-content-list">
+		<div id="blogTitlelist">
+			<h1>欢迎来到Naro的BLOG</h1>
 		</div>
-		<div id="BlogALL-content" >
-			
+		 <!-- <div id="bloglist"></div> -->
 		</div>
-	</div>	
+	</div>
     <div id="footer">
 	    <iframe src="footer.html" frameborder="0" width="100%" height="80px"></iframe>
 	</div>
 		
 	</div>
-	<script src="../js/data.js"></script>
-	<script type="text/javascript">
-		y+=data.sites[0].title;
-		document.getElementById("BlogALL-title-small").innerHTML=y;
-		var z="";
-		z+='<div class="BlogALL-content-con"><pre>'+data.content[0].data+'</pre></div>';
-		document.getElementById("BlogALL-content").innerHTML=z;
+<script src="../js/data.js"></script>
+<script type="text/javascript">
+var x="";
+	for(var i=data.sites.length-1;i>-1;i--){
+	x+='<div id="bloglist" class="post-list-item"><a href="blog'+i+'.html"><h2>'+data.sites[i].title+'</h2></a></div>';
+    
+}
 
-	</script>
+document.getElementById("section-content-list").innerHTML+=x;
+</script>
 </body>
 </html>

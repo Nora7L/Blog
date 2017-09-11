@@ -110,7 +110,7 @@ body{
 }
 .section-content{
 	width: 1000px;
-	margin:0 auto;
+	margin:100px auto;
 
 }
 .section-content .section-content-content{
@@ -251,6 +251,51 @@ footer{
 	font-family: "PingFang TC,Avenir Next,Helvetica,Arial,Hiragino Sans GB,Microsoft YaHei,sans-serif";
 	color: #666;
 
+}
+#bloglist{
+	width: 800px;
+	height: 100px;
+	margin:0 auto;
+	background-image: url(../img/bg-0004.jpg)
+}
+#blogTitlelist{
+	width: 1000px;
+	height: 150px;
+	line-height: 150px;
+	margin:0 auto;
+}
+#blogTitlelist h1{
+	text-align: center;
+	color: #666;
+}
+#section-content-list{
+	width: 1000px;
+	margin:100px auto;
+	background-color:#87CEFA;
+	padding: 20px;
+	padding-bottom: 150px;
+    border-radius: 10px;
+
+}
+.post-list-item:hover{
+	border-left: 0.6em solid #483D8B;
+}
+.post-list-item {
+    display: block;
+    padding: 8px 30px 10px 30px;
+    border-radius: 10px;
+    margin-bottom: 3px;
+    border-bottom: 1px dashed #aaa;
+    border-left: 0.6em solid #ccc;
+    transition: 0.45s ease;
+    -webkit-transition: 0.45s ease;
+    -moz-transition: 0.45s ease;
+    -o-transition: 0.45s ease;
+}
+.post-list-item h2{
+    color: #2ca6cb;
+    margin: 35px 0 8px 0;
+    cursor: pointer;
 }
 /*代码高亮*/
 .heightDm{
