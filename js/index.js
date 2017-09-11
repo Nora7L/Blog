@@ -18,13 +18,13 @@ $(function(){
 		var scrollTop=$(document).scrollTop();
 		var headerH=$('.header').height();
 		// console.log(scrollTop)
-		if (scrollTop>headerH+60) {
+		if (scrollTop>headerH) {
 			$('.header').css({
 				'position':'fixed',
 				'top':"0",
 				'zIndex':'9999'
 		    });
-		    $('.section').css('marginTop','120px')
+		    $('.section').css('marginTop','60px')
 		}else{
             $('.header').css('position','static');
 		    $('.section').css('marginTop','60px')
@@ -65,8 +65,17 @@ $(function(){
 				.animate({
 					'top':(num+1)+"00px",
 					"left":(10-(i+2))+"00px"
-				},1200).fadeOut()
+				},1200).fadeOut();
 		
 	}
 
+})
+/*about*/
+$(function(){
+	$('.icon-weibo').mouseenter(function(){
+		$('.vb').fadeIn('slow');
+	})
+	$('.icon-weibo').mouseleave(function(){
+		$('.vb').fadeOut('slow')
+	})
 })

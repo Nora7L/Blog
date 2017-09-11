@@ -297,6 +297,53 @@ footer{
     margin: 35px 0 8px 0;
     cursor: pointer;
 }
+#section-content-about{
+	width: 1000px;
+	margin: 100px auto;
+	background-color: #fff;
+	border: 1px solid #87CEFA;
+	border-radius: 10px;
+}
+#section-content-about p{
+	color: #666;
+	margin: 20px;
+	height: 50px;
+	line-height: 50px;
+}
+.aboutmiss{
+	width: 100%;
+	margin: 10px auto;
+	text-align: center;
+	
+}
+.vb-a{
+	position: relative;
+	
+}
+.vb{
+	display: inline-block;
+	width: 50px;
+	height: 30px;
+	line-height: 30px;
+    color: #fff;
+	background-color: #aaa;
+	text-align: center;
+	position: absolute;
+	left: -8px;
+	bottom: 40px;
+	display: none;
+}
+.vb::before{
+	content: "";
+	width: 0;
+	height: 0;
+	border: 10px solid #eee;
+	border-color:#aaa transparent  transparent  transparent;
+	position: absolute;
+	left: 13px;
+	bottom: -20px;
+
+}
 /*代码高亮*/
 .heightDm{
 	margin: 20px 10px;
@@ -324,7 +371,7 @@ footer{
 .icon-top{
 	font-size: 50px;
 	position: absolute;
-	left: 24px;
+	left: 18px;
 	top: 15px;
 }
 /*分页*/
