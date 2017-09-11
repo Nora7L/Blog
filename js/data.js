@@ -34,21 +34,21 @@ data={
 		"aclass":"随笔"
 	},
 	{
-		"title":"关于JSON和AJAX的想法",
-		"data":"2017.9.1",
+		"title":"关于JSON的几种解析方法",
+		"data":"2017.9.7",
 		"class":"随笔",
 		"img":"http://ovuz0ozqd.bkt.clouddn.com/AJAX.jpg",
 		"more":"read more",
 		"aclass":"随笔"
 	}
-	,{
-		"title":"Vue.js学习",
-		"data":"2017.9.3",
-		"class":"随笔",
-		"img":"http://ovuz0ozqd.bkt.clouddn.com/bgvue.jpg",
-		"more":"read more",
-		"aclass":"随笔"
-	}
+	// ,{
+	// 	"title":"Vue.js学习",
+	// 	"data":"2017.9.3",
+	// 	"class":"随笔",
+	// 	"img":"http://ovuz0ozqd.bkt.clouddn.com/bgvue.jpg",
+	// 	"more":"read more",
+	// 	"aclass":"随笔"
+	// }
 	],
 	"content":[
 	{
@@ -552,6 +552,350 @@ data={
        +`<br><h5><a href="https://naro7l.coding.me/game-el/" style="color:black;">这是dome地址</a></h5><br>`
        +`<h5><a href="https://github.com/Nora7L/js--game" style="color:black;">这是源码地址</a></h5><br>`
 	},
+       {
+            "data":`
+            <p>好像常用的GIT命令只有那么几个,这次主要是记录一下较全的git命令</p>
+            <pre>
+<h4>Git常用操作命令：</h4>
+1) 远程仓库相关命令
+检出仓库：$ git clone git:
+查看远程仓库：$ git remote -v
+添加远程仓库：$ git remote add [name] [url]
+删除远程仓库：$ git remote rm [name]
+修改远程仓库：$ git remote set-url --push [name] [newUrl]
+拉取远程仓库：$ git pull [remoteName] [localBranchName]
+推送远程仓库：$ git push [remoteName] [localBranchName]
+ 
+*如果想把本地的某个分支test提交到远程仓库，并作为远程仓库的master分支，或者作为另外一个名叫test的分支，如下：
+$git push origin test:master         // 提交本地test分支作为远程的master分支
+$git push origin test:test              // 提交本地test分支作为远程的test分支
+ 
+2）分支(branch)操作相关命令
+查看本地分支：$ git branch
+查看远程分支：$ git branch -r
+创建本地分支：$ git branch [name] ----注意新分支创建后不会自动切换为当前分支
+切换分支：$ git checkout [name]
+创建新分支并立即切换到新分支：$ git checkout -b [name]
+删除分支：$ git branch -d [name] ---- -d选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-D选项
+合并分支：$ git merge [name] ----将名称为[name]的分支与当前分支合并
+创建远程分支(本地分支push到远程)：$ git push origin [name]
+删除远程分支：$ git push origin :heads/[name] 或 $ gitpush origin :[name] 
+ 
+*创建空的分支：(执行命令之前记得先提交你当前分支的修改，否则会被强制删干净没得后悔)
+$git symbolic-ref HEAD refs/heads/[name]
+$rm .git/index
+$git clean -fdx
+ 
+3）版本(tag)操作相关命令
+查看版本：$ git tag
+创建版本：$ git tag [name]
+删除版本：$ git tag -d [name]
+查看远程版本：$ git tag -r
+创建远程版本(本地版本push到远程)：$ git push origin [name]
+删除远程版本：$ git push origin :refs/tags/[name]
+合并远程仓库的tag到本地：$ git pull origin --tags
+上传本地tag到远程仓库：$ git push origin --tags
+创建带注释的tag：$ git tag -a [name] -m 'yourMessage'
+ 
+4) 子模块(submodule)相关操作命令
+添加子模块：$ git submodule add [url] [path]
+   如：$git submodule add git://github.com/soberh/ui-libs.git src/main/webapp/ui-libs
+初始化子模块：$ git submodule init  ----只在首次检出仓库时运行一次就行
+更新子模块：$ git submodule update ----每次更新或切换分支后都需要运行一下
+删除子模块：（分4步走哦）
+ 1) $ git rm --cached [path]
+ 2) 编辑“.gitmodules”文件，将子模块的相关配置节点删除掉
+ 3) 编辑“ .git/config”文件，将子模块的相关配置节点删除掉
+ 4) 手动删除子模块残留的目录
+ 
+5）忽略一些文件、文件夹不提交
+在仓库根目录下创建名称为“.gitignore”的文件，写入不需要的文件夹名或文件，每个元素占一行即可，如
+target
+bin
+*.db
+ 
+=====================
+Git 常用命令
+git branch 查看本地所有分支
+git status 查看当前状态 
+git commit 提交 
+git branch -a 查看所有的分支
+git branch -r 查看本地所有分支
+git commit -am "init" 提交并且加注释 
+git remote add origin git@192.168.1.119:ndshow
+git push origin master 将文件给推到服务器上 
+git remote show origin 显示远程库origin里的资源 
+git push origin master:develop
+git push origin master:hb-dev 将本地库与服务器上的库进行关联 
+git checkout --track origin/dev 切换到远程dev分支
+git branch -D master develop 删除本地库develop
+git checkout -b dev 建立一个新的本地分支dev
+git merge origin/dev 将分支dev与当前分支进行合并
+git checkout dev 切换到本地dev分支
+git remote show 查看远程库
+git add .
+git rm 文件名(包括路径) 从git中删除指定文件
+git clone git://github.com/schacon/grit.git 从服务器上将代码给拉下来
+git config --list 看所有用户
+git ls-files 看已经被提交的
+git rm [file name] 删除一个文件
+git commit -a 提交当前repos的所有的改变
+git add [file name] 添加一个文件到git index
+git commit -v 当你用－v参数的时候可以看commit的差异
+git commit -m "This is the message describing the commit" 添加commit信息
+git commit -a -a是代表add，把所有的change加到git index里然后再commit
+git commit -a -v 一般提交命令
+git log 看你commit的日志
+git diff 查看尚未暂存的更新
+git rm a.a 移除文件(从暂存区和工作区中删除)
+git rm --cached a.a 移除文件(只从暂存区中删除)
+git commit -m "remove" 移除文件(从Git中删除)
+git rm -f a.a 强行移除修改后文件(从暂存区和工作区中删除)
+git diff --cached 或 $ git diff --staged 查看尚未提交的更新
+git stash push 将文件给push到一个临时空间中
+git stash pop 将文件从临时空间pop下来
+---------------------------------------------------------
+git remote add origin git@github.com:username/Hello-World.git
+git push origin master 将本地项目给提交到服务器中
+-----------------------------------------------------------
+git pull 本地与服务器端同步
+-----------------------------------------------------------------
+git push (远程仓库名) (分支名) 将本地分支推送到服务器上去。
+git push origin serverfix:awesomebranch
+------------------------------------------------------------------
+git fetch 相当于是从远程获取最新版本到本地，不会自动merge
+git commit -a -m "log_message" (-a是提交所有改动，-m是加入log信息) 本地修改同步至服务器端 ：
+git branch branch_0.1 master 从主分支master创建branch_0.1分支
+git branch -m branch_0.1 branch_1.0 将branch_0.1重命名为branch_1.0
+git checkout branch_1.0/master 切换到branch_1.0/master分支
+du -hs
+
+-----------------------------------------------------------
+mkdir WebApp
+cd WebApp
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@github.com:daixu/WebApp.git
+git push -u origin master
+            </pre>
+            `   
+       }
+       ,
+       {
+            "data":`<pre>
+<h4>json解析方式一：</h4>
+<div class="heightDm">
+<pre class="brush: js">
+{
+    "message": "查询成功",
+    "status": "10000",
+    "list": [
+        {
+            "withdraw_type": "3",
+            "withdraw_bankcard": "6214836550378968",
+            "withdraw_date": "2015-5-24 07:24:04",
+            "withdraw_money": "7000"
+        },
+        {
+            "withdraw_type": "2",
+            "withdraw_bankcard": "6214836550378968",
+            "withdraw_date": "2015-5-24 07:22:57",
+            "withdraw_money": "4000"
+        },
+        {
+            "withdraw_type": "1",
+            "withdraw_bankcard": "6214836550378968",
+            "withdraw_date": null,
+            "withdraw_money": "5000"
+        },
+        {
+            "withdraw_type": "4",
+            "withdraw_bankcard": "6214836550378968",
+            "withdraw_date": "2015-5-24 07:25:12",
+            "withdraw_money": "5000"
+        }
+    ]
+}
+</pre>
+</div>
+<p>解析方法：</p>
+<div class="heightDm">
+<pre class="brush: js">
+String result = Net.GetTixianMoneyDetail(Constant.getTixianMoneyDetail,
+"sigen",ph.getValue("sigen"));
+result = result.substring(1, result.length() - 1);
+Log.i("结果", result);
+JSONObject jsonObject = new JSONObject(result);
+JSONArray array = jsonObject.getJSONArray("list");
+JSONObject jsonObject2;
+for(int i = 0;i<array.length();i++){
+    map =  new HashMap<String, String>();
+    jsonObject2 = array.getJSONObject(i);
+    map.put("withdraw_money", jsonObject2.getString("withdraw_money"));
+    map.put("bankno", jsonObject2.getString("withdraw_bankcard"));
+    map.put("withdraw_type",jsonObject2.getString("withdraw_type"));
+    map.put("time", jsonObject2.getString("withdraw_date"));
+    list.add(map);
+}
+</pre>
+</div>
+<h4>json解析方式二：</h4>
+<div class="heightDm">
+<pre class="brush: js">
+{
+    "message": "查询成功",
+    "list4": [
+        {
+            "total": "0.0",
+            "day": "2015-05-14",
+            "trade_type2": "0.0",
+            "trade_type1": "0.0",
+            "trade_type3": "0.0"
+        }
+    ],
+    "list5": [
+        {
+            "total": "0.0",
+            "day": "2015-05-15",
+            "trade_type2": "0.0",
+            "trade_type1": "0.0",
+            "trade_type3": "0.0"
+        }
+    ],
+    "list2": [
+        {
+            "total": "1000.0",
+            "day": "2015-05-12",
+            "trade_type2": "1000.0",
+            "trade_type1": "0.0",
+            "trade_type3": "0.0"
+        }
+    ],
+    "list3": [
+        {
+            "total": "1000.0",
+            "day": "2015-05-13",
+            "trade_type2": "0.0",
+            "trade_type1": "0.0",
+            "trade_type3": "1000.0"
+        }
+    ],
+    "status": "10000",
+    "list1": [
+        {
+            "total": "940.0",
+            "day": "2015-05-11",
+            "trade_type2": "0.0",
+            "trade_type1": "940.0",
+            "trade_type3": "0.0"
+        }
+    ],
+    "list6": [
+        {
+            "total": "0.0",
+            "day": "2015-05-16",
+            "trade_type2": "0.0",
+            "trade_type1": "0.0",
+            "trade_type3": "0.0"
+        }
+    ],
+    "list7": [
+        {
+            "total": "0.0",
+            "day": "2015-05-17",
+            "trade_type2": "0.0",
+            "trade_type1": "0.0",
+            "trade_type3": "0.0"
+        }
+    ]
+}
+</pre>
+</div>
+<p>解析方式：</p>
+<div class="heightDm">
+<pre class="brush: js">
+String result = Net.SetDataZhuXing(Constant.getWeekData,
+"sigen", sigen, "date", date);
+result = result.substring(1, result.length() - 1);
+Log.i("数据结果", result);
+
+JSONObject jsonObject = new JSONObject(result);
+JSONArray list1 = jsonObject.getJSONArray("list1");
+JSONArray list2 = jsonObject.getJSONArray("list2");
+JSONArray list3 = jsonObject.getJSONArray("list3");
+JSONArray list4 = jsonObject.getJSONArray("list4");
+JSONArray list5 = jsonObject.getJSONArray("list5");
+JSONArray list6 = jsonObject.getJSONArray("list6");
+JSONArray list7 = jsonObject.getJSONArray("list7");
+
+JSONArray[] jsonarray = new JSONArray[] { list1, list2,
+    list3, list4, list5, list6, list7 };
+    JSONObject jsonObject1 = new JSONObject();
+    for (int i = 0; i < jsonarray.length; i++) {
+        map = new HashMap<String, String>();
+        jsonObject1 = (JSONObject) jsonarray[i].opt(0);
+        map.put("total", jsonObject1.getString("total"));// 视频id
+        map.put("day", jsonObject1.getString("day"));// 图片名字
+        map.put("trade_type2",
+        jsonObject1.getString("trade_type2"));// 图片地址
+        map.put("trade_type3",
+        jsonObject1.getString("trade_type3"));// 积分
+        map.put("trade_type1",
+        jsonObject1.getString("trade_type1"));// 图片
+        list_two.add(map);
+ }
+</pre>
+</div>
+<h4>json解析方式三：</h4>
+<div class="heightDm">
+<pre class="brush: js">
+[
+    {
+        "message": "查询成功",
+        "isFriday": "1",
+        "balance_position": "0.0",
+        "status": "10000",
+        "sum_bonus": "0",
+        "balance_recommend": "2115.00",
+        "IS_Last": "0",
+        "balance_manager": "211.50"
+    }
+]
+</pre>
+</div>
+<p>解析方式：</p>
+<div class="heightDm">
+<pre class="brush: js">
+String result = Net.GetTixianMoney(Constant.getTixianMoney,
+"sigen", sigenNum);
+result = result.substring(1, result.length() - 1);
+Log.i("登录结果", result);
+JSONObject jsonObject = new JSONObject(result);
+chuangye_tianxian = jsonObject
+.getString("balance_recommend");// 可提现创业奖金(元)
+shichang_tixiang = jsonObject.getString("balance_position");// 可提现市场区域奖励(元)
+guanli_tixiang = jsonObject.getString("balance_manager");// 可提现管理补贴(元)
+fenghong_tixiang = jsonObject.getString("sum_bonus");// 可提现创业分红(元)
+//today_server = jsonObject.getString("date");// 可提现创业分红(元)
+isLast = jsonObject.getString("IS_Last");// 1表示不是月末
+isFriday = jsonObject.getString("isFriday");// 可提现创业分红(元)
+</pre>
+</div>
+总结：一层一层剥开。
+
+方式三： 
+    没有json数组，就直接包装成json 对象。JSONObject jsonObject = new JSONObject(result);然后getString取出来
+
+方式一：
+    里面包含一个json数组，那么先把最外层JSONObject jsonObject = new JSONObject(result);包装成json格式。从jsonObject中得到json数组， JSONArray array = jsonObject.getJSONArray("list");然后遍历。
+
+方式三：
+    里面包含多个json数组，那么就把jsonArray放入到JsonArray[]中去。然后每个jsonArray遍历
+
+            </pre>`   
+       }
 	]
 
 
