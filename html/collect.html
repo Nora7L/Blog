@@ -42,11 +42,19 @@
 		<div class="section">			
 			<!-- JSON 内容-->
 			<div class="section-content" id="section-content-collect">
-			  <div id="mycollect">
-			  <span>My collect</span>
+			  <div class="collectall" id="mycollect">
+			  <h3>My collect</h3>
+			  <!-- <span>aa：</span><a href="">aa</a> -->
 			  </div>
-			  <div id="anothercollect">
-			  	<span>Another collect</span>
+			  <img src="../img/fa52308b228df5df296a1394f8997da7.png" style="width: 500px;height: 300px;">
+              <div class="showcollectall">
+              	<p>&nbsp;&nbsp;&nbsp;&nbsp;这里是我学习或做项目的过程中发现的好的blog或者大神的讲解，这里进行一个总结归纳~~！</p>
+              	<p>&nbsp;&nbsp;&nbsp;&nbsp;mycollect里也会贴一些自己做的H5效果或者其他~~</p>
+              	<p>&nbsp;&nbsp;&nbsp;&nbsp;干货满满吼吼吼~持续更新<img src="http://ovuz0ozqd.bkt.clouddn.com/a.png"  style="width: 50px;height: 50px;" src=""></p>
+              </div>
+			  <div class="collectall" id="anothercollect">
+			  	<h3>Another collect</h3>
+
 			  </div>
 			</div>
 		</div>
@@ -55,10 +63,18 @@
 	</div>
 		
 	</div>
-<script src="js/data.js"></script>
+<script src="../js/data.js"></script>
 <script type="text/javascript">
+var oSpan="",oSpan2="";
+for(var i=collect.mycollect.length-1;i>-1;i--){
+oSpan+='<div class="collectall-con"><span class="smalltit">'+collect.mycollect[i].span+'：</span><a href="'+collect.mycollect[i].a+'">'+collect.mycollect[i].data+'</a>--<span>'+collect.mycollect[i].con+'</span><br></div>';
 
-
+}
+for (var i=collect.anothercollect.length-1;i>-1;i--) {
+	oSpan2+='<div class="collectall-con"><span class="smalltit">'+collect.anothercollect[i].span+'：</span><a href="'+collect.anothercollect[i].a+'">'+collect.anothercollect[i].data+'</a>--<span>'+collect.anothercollect[i].con+'</span><br></div>';
+}
+document.getElementById("mycollect").innerHTML+=oSpan;
+document.getElementById("anothercollect").innerHTML+=oSpan2;
 </script>
 </body>
 </html>

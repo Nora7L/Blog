@@ -344,6 +344,38 @@ footer{
 	bottom: -20px;
 
 }
+.collectall{
+ width: 1000px;
+ margin: 20px auto;
+ border: 1px solid #87CEFA;
+ background-color: #fff;
+ padding: 20px ;
+ background-image: url(../img/bg-0004.jpg);
+}
+.collectall h3{
+	text-align: center;
+	color: #666;
+
+}
+.collectall-con{
+	margin-top: 15px;
+}
+.smalltit{
+	display: inline-block;
+	color: #00B2EE;
+	font-size: 20px;
+}
+#section-content-collect{
+	position: relative;
+	
+}
+.showcollectall{
+	position: absolute;
+    right: 100px;
+    top: 30%;
+    width: 300px;
+    height: 200px;
+}
 /*代码高亮*/
 .heightDm{
 	margin: 20px 10px;

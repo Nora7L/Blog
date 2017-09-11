@@ -6,3 +6,6 @@ a{text-decoration: none;}
 span{cursor: pointer;}
 .block{display: block;}
 .none{display: none;}
+a:visited{color: #666;}
+a:active{color: #000;}
+a:link{color: #666;}

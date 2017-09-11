@@ -1,3 +1,87 @@
+var collect={
+       "mycollect":[
+       
+       {
+              "span":"个人简历",
+              "a":"https://naro7l.coding.me/resume/",
+              "data":"dome",
+              "con":"最近要开始找工作了，写了个PC和移动端的简历"
+       },
+       {
+              "span":"俄罗斯方块",
+              "a":"https://naro7l.coding.me/game-el/",
+              "data":"dome",
+              "con":"练手写的小游戏"
+       }      
+       ,
+       {
+              "span":"俄罗斯方块",
+              "a":"https://naro7l.coding.me/game-el/",
+              "data":"dome",
+              "con":"练手写的小游戏"
+       }
+       ],
+       "anothercollect":[
+       {
+              "span":"弹性盒模型详解",
+              "a":"http://blog.csdn.net/mr_lp/article/details/50966842",
+              "data":"传送门",
+              "con":"MR_LP的博客，弹性盒模型讲解的很好"
+       },
+       {
+              "span":"CSS3 2D Transform",
+              "a":"https://www.w3cplus.com/css3/css3-2d-transform.html",
+              "data":"传送门",
+              "con":"关于Transform"
+       },
+       {
+              "span":"SyntaxHighlighter",
+              "a":"http://www.cnblogs.com/heyuquan/archive/2012/09/28/2707632.html",
+              "data":"传送门",
+              "con":"一个代码高亮的插件，非常好用！"
+       },
+       {
+             "span":"前端Web开发资源整理",
+              "a":"https://zhuanlan.zhihu.com/p/23344447?utm_medium=social&utm_source=qq",
+              "data":"传送门",
+              "con":"知乎上很全面的前端开源小dome的总结"         
+       },
+       {
+             "span":"Vue.js的入门资料",
+              "a":"http://www.cnblogs.com/keepfool/p/5619070.html",
+              "data":"传送门",
+              "con":"写的蛮好的，我就是靠这个入门vue的"         
+       },
+       {
+             "span":"GitHub上README.md教程",
+              "a":"http://blog.csdn.net/kaitiren/article/details/38513715",
+              "data":"传送门",
+              "con":"前几天编写README.md的时候找到的，也是学习到了！"         
+       },
+       
+       {
+              "span":"RGB颜色对照图",
+              "a":"http://tool.oschina.net/commons?type=3",
+              "data":"传送门",
+              "con":"非常全面的颜色大全"
+       },
+       
+       {
+              "span":"入门Webpack，看这篇就够了",
+              "a":"http://www.jianshu.com/p/42e11515c10f",
+              "data":"传送门",
+              "con":"特别的详细，忍不住收了"
+       },
+       
+       {
+              "span":"数组去重的五个方法",
+              "a":"http://caibaojian.com/js-delrepeat.html",
+              "data":"传送门",
+              "con":"常规和非常规的方法，比较好理解!"
+       }
+        ]
+}
+
 var data,x="",y="";
 data={
 	"sites":[
