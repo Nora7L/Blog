@@ -15,10 +15,17 @@ var collect={
        }      
        ,
        {
-              "span":"俄罗斯方块",
-              "a":"https://naro7l.coding.me/game-el/",
+              "span":"移动端的音乐播放器",
+              "a":"https://github.com/Nora7L/AJAX-project",
               "data":"dome",
-              "con":"练手写的小游戏"
+              "con":"练习AJAX，通过这个还学习了一点PHP，O(∩_∩)O~"
+       }
+        ,
+       {
+              "span":"图片瀑布流",
+              "a":"https://github.com/Nora7L/The-waterfall-flow-AJAX",
+              "data":"dome",
+              "con":"懒加载的写法，O(∩_∩)O~"
        }
        ],
        "anothercollect":[
@@ -78,6 +85,12 @@ var collect={
               "a":"http://caibaojian.com/js-delrepeat.html",
               "data":"传送门",
               "con":"常规和非常规的方法，比较好理解!"
+       },
+	{
+              "span":"深入理解javascript原型和闭包",
+              "a":"http://www.cnblogs.com/wangfupeng1988/p/3977924.html",
+              "data":"传送门",
+              "con":"写的非常仔细，今天又看了一遍，感觉有了更深入的理解!"
        }
         ]
 }
