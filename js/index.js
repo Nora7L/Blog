@@ -79,3 +79,57 @@ $(function(){
 		$('.vb').fadeOut('slow')
 	})
 })
+/*h5nav点击效果*/
+$(function(){
+	var $nav = $('.header-nav ul');
+	var viewWidth = $(window).width();
+    var viewHeight = $(window).height();
+    var desWidth = 640;
+    var touchstart = 'touchstart';
+    var touchmove = 'touchmove';
+    var touchend = 'touchend';
+
+	$('.navMobileLogo').on('click',function(e){
+		e.stopPropagation();
+		
+
+		if( $nav.hasClass('navMobile') ){
+			$nav.addClass('header-nav-nav').removeClass('navMobile')
+		}
+		else{
+			$('.navMobile').css('display','block')
+			$nav.addClass('navMobile').removeClass('header-nav-nav')
+		}
+	});
+	$('body').on('click', function(){
+		$nav.addClass('header-nav-nav').removeClass('navMobile')
+	});
+	$nav.find('li').on('click', function(){
+		$nav.addClass('header-nav-nav').removeClass('navMobile')
+	});
+
+    function device(){
+	     /*resize检测尺寸变化*/
+	    $(window).resize(function(){
+	       viewWidth = $(window).width();
+	       viewHeight = $(window).height();
+	    });
+    // console.log(navigator.userAgent)
+        if (!isMobile) {
+          touchstart = 'mousedown';
+          touchmove = 'mousemove';
+          touchend = 'mouseup';
+        }
+
+    }
+
+    $nav.find('li').on(touchmove, function(){
+		$(this).addClass('changecolor').siblings().removeClass('changecolor')
+	});
+
+
+
+})
+
+
+

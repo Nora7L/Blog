@@ -6,8 +6,8 @@
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   position: fixed;
-  bottom: 100px;
-  right: 100px;
+  bottom: 10%;
+  right: 1%;
   display: none; }
 
 /* header */
@@ -45,8 +45,22 @@
       float: left;
       color: #666;
       font-size: 20px; }
+      .header-nav .header-nav-nav li:hover {
+        border-bottom: 1px solid #fff; }
       .header-nav .header-nav-nav li a {
         color: #666; }
+  .header-nav .navMobile {
+    width: 200px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #ccc;
+    border-radius: 5px; }
+    .header-nav .navMobile li {
+      padding: 10px 20px;
+      text-align: center; }
+      .header-nav .navMobile li a {
+        text-align: center; }
 
 .header-nav-music {
   position: absolute;
@@ -82,6 +96,13 @@
     text-shadow: 1.5px 1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px 1.5px 0 #cac6c5, 1.5px -1.5px 0 #cac6c5;
     transition: all 400ms ease-in-out; }
 
+.navMobileLogo {
+  position: absolute;
+  right: 2%;
+  z-index: 666;
+  top: 25%;
+  display: none; }
+
 .raiseUp:hover {
   transform: translate(-9px, -9px);
   text-shadow: 1.5px 1.5px 0 #333, 0px 1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px 1.5px 0 #333, 1.5px -1.5px 0 #333, 0.77782px 0.77782px 0 #aaaaaa, 1.55563px 1.55563px 0 #aaaaaa, 2.33345px 2.33345px 0 #aaaaaa, 3.11127px 3.11127px 0 #aaaaaa, 3.88909px 3.88909px 0 #aaaaaa; }
@@ -104,7 +125,6 @@ body {
   margin: 100px auto; }
   .section-content .section-content-content {
     width: 100%;
-    height: 330px;
     background: #eee;
     margin: 50px auto;
     border-radius: 20px;
@@ -126,7 +146,7 @@ body {
   width: 900px;
   height: 150px; }
   .section-con > a > img {
-    width: 900px;
+    width: 100%;
     height: 150px; }
   .section-con a {
     display: block;
@@ -354,9 +374,43 @@ footer {
   overflow: hidden;
   text-align: center; }
 
+.changecolor {
+  border-bottom: 1px solid #19b1e0; }
+
+@media (max-width: 600px) {
+  .section-header a h1 {
+    font-size: 20px;
+    margin: 10px 20px; } }
 @media (max-width: 768px) {
   .header-nav-music {
-    display: none; } }
+    display: none; }
+
+  .header-nav-nav {
+    display: none !important; }
+
+  .section {
+    width: 80%; }
+
+  .section-content {
+    width: 100%; }
+
+  .section-con {
+    width: 100%; }
+
+  .navMobile {
+    display: block; }
+
+  .navMobileLogo {
+    display: block; } }
+@media (max-width: 1024px) {
+  .section {
+    width: 80%; }
+
+  .section-content {
+    width: 100%; }
+
+  .section-con {
+    width: 100%; } }
 /*font */
 .icon-top {
   font-size: 50px;
