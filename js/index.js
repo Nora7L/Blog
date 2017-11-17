@@ -26,7 +26,7 @@ $(function(){
 		    });
 		    $('.section').css('marginTop','120px')
 		}else{
-            $('.header').css('position','static');
+            $('.header').css('position','relative');
 		    $('.section').css('marginTop','60px')
 		}
    })
