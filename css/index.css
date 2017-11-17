@@ -55,7 +55,8 @@
     right: 0;
     top: 60px;
     background-color: #ccc;
-    border-radius: 5px; }
+    border-radius: 5px;
+    z-index: 66666666; }
     .header-nav .navMobile li {
       padding: 10px 20px;
       text-align: center; }
@@ -293,16 +294,17 @@ footer {
     cursor: pointer; }
 
 #section-content-about {
-  width: 1000px;
   margin: 100px auto;
   background-color: #fff;
   border: 1px solid #87cefa;
   border-radius: 10px; }
+  #section-content-about img {
+    width: 100%; }
   #section-content-about p {
     color: #666;
     margin: 20px;
     height: 50px;
-    line-height: 50px; }
+    line-height: 25px; }
 
 .aboutmiss {
   width: 100%;
@@ -335,7 +337,6 @@ footer {
     bottom: -20px; }
 
 .collectall {
-  width: 1000px;
   margin: 20px auto;
   border: 1px solid #87cefa;
   background-color: #fff;
@@ -377,10 +378,24 @@ footer {
 .changecolor {
   border-bottom: 1px solid #19b1e0; }
 
-@media (max-width: 600px) {
-  .section-header a h1 {
-    font-size: 20px;
-    margin: 10px 20px; } }
+@media (max-width: 1024px) {
+  .section {
+    width: 80%; }
+
+  .section-content {
+    width: 100%; }
+
+  .section-con {
+    width: 100%; }
+
+  #section-content-list {
+    width: 100%; }
+
+  #blogTitlelist {
+    width: 100%; }
+
+  #bloglist {
+    width: 80%; } }
 @media (max-width: 768px) {
   .header-nav-music {
     display: none; }
@@ -402,24 +417,31 @@ footer {
 
   .navMobileLogo {
     display: block; } }
-@media (max-width: 1024px) {
-  .section {
-    width: 80%; }
-
-  .section-content {
-    width: 100%; }
-
-  .section-con {
-    width: 100%; }
+@media (max-width: 600px) {
+  .section-header a h1 {
+    font-size: 20px;
+    margin: 10px 20px; }
 
   #section-content-list {
-    width: 100%; }
+    padding: 0;
+    padding-bottom: 30px; }
 
-  #blogTitlelist {
-    width: 100%; }
+  #blogTitlelist h1 {
+    font-size: 25px; }
 
   #bloglist {
-    width: 80%; } }
+    width: 66%; }
+
+  .showcollectall {
+    right: 0;
+    color: #fff; } }
+@media (max-width: 320px) {
+  #blogTitlelist {
+    height: 90px;
+    line-height: 40px; }
+
+  .showcollectall {
+    width: 250px; } }
 /*font */
 .icon-top {
   font-size: 50px;

@@ -53,6 +53,7 @@
     top: 60px
     background-color: #ccc
     border-radius: 5px
+    z-index: 66666666
     li
       padding: 10px 20px
       text-align: center
@@ -316,16 +317,17 @@ footer
  
 
 #section-content-about
-  width: 1000px 
   margin: 100px auto 
   background-color: #fff 
   border: 1px solid #87cefa 
-  border-radius: 10px 
+  border-radius: 10px
+  img
+    width: 100%
   p
     color: #666 
     margin: 20px 
     height: 50px 
-    line-height: 50px 
+    line-height: 25px
  
 
 .aboutmiss
@@ -360,7 +362,6 @@ footer
  
 
 .collectall
-  width: 1000px 
   margin: 20px auto 
   border: 1px solid #87cefa 
   background-color: #fff 
@@ -402,27 +403,6 @@ footer
 .changecolor
   border-bottom: 1px solid #19b1e0
 
-@media (max-width: 600px)
-  .section-header
-    a
-      h1
-        font-size: 20px 
-        margin: 10px 20px 
-@media (max-width: 768px)
-  .header-nav-music
-    display: none 
-  .header-nav-nav
-    display: none !important
-  .section
-    width: 80%
-  .section-content
-    width: 100%
-  .section-con
-    width: 100%
-  .navMobile
-    display: block
-  .navMobileLogo
-    display: block
 
 
 @media (max-width: 1024px)
@@ -439,8 +419,44 @@ footer
   #bloglist
     width: 80%
 
+@media (max-width: 768px)
+  .header-nav-music
+    display: none 
+  .header-nav-nav
+    display: none !important
+  .section
+    width: 80%
+  .section-content
+    width: 100%
+  .section-con
+    width: 100%
+  .navMobile
+    display: block
+  .navMobileLogo
+    display: block
 
-
+@media (max-width: 600px)
+  .section-header
+    a
+      h1
+        font-size: 20px 
+        margin: 10px 20px
+  #section-content-list
+    padding: 0 
+    padding-bottom: 30px
+  #blogTitlelist h1
+    font-size: 25px
+  #bloglist
+    width: 66%
+  .showcollectall 
+    right: 0
+    color: #fff
+@media (max-width: 320px)
+  #blogTitlelist 
+    height: 90px
+    line-height: 40px
+  .showcollectall
+    width: 250px
 
 /*font*/
 .icon-top
