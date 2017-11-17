@@ -120,7 +120,6 @@ $(function(){
           touchmove = 'mousemove';
           touchend = 'mouseup';
         }
-
     }
 
     $nav.find('li').on(touchmove, function(){
